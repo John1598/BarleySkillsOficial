@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "npx ng build --define=\"GEMINI_API_KEY='$GEMINI_API_KEY'\" && cp dist/app/browser/index.csr.html dist/app/browser/index.html"
   publish = "dist/app/browser"
 
 [build.environment]
