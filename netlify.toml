@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist/app/browser"
+
+[build.environment]
+  NODE_VERSION = "20"
+  SKIP_PYTHON_INSTALL = "true"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
