@@ -1,13 +1,10 @@
 [build]
-  command = "npm run build"
+  command = "npm run build && cp dist/app/browser/index.csr.html dist/app/browser/index.html"
   publish = "dist/app/browser"
 
 [build.environment]
   NODE_VERSION = "20"
   SKIP_PYTHON_INSTALL = "true"
-
-[[plugins]]
-  package = "@netlify/angular-runtime"
 
 [[redirects]]
   from = "/*"
